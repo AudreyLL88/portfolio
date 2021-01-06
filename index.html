@@ -8,10 +8,12 @@
     <link rel="stylesheet" href="assets/css/styles.css">
     <!-- BoxIcons -->
     <link href="https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css" rel="stylesheet">
+     <!-- EmailJS -->
+     <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js">
+    </script>
     <script type="text/javascript">
-   (function(){
-      emailjs.init("user_XWzDZW1oOUCFfFBWubYxF");
-   })();
+        (function(){emailjs.init("user_n1yqH7AiC8IS42scHG8pQ");})();
     </script>
 </head>
 <body>
@@ -129,10 +131,10 @@
                 </div>
                 <form class="contact__form" onsubmit="return sendMail(this);">
                     <div class="contact__inputs">
-                        <input type="text" placeholder="Name" class="contact__input" required>
-                        <input type="mail" placeholder="Email" class="contact__input" required>
+                        <input type="text" name="name" placeholder="Name" class="contact__input" required>
+                        <input type="email" name="email" placeholder="Email" class="contact__input" required>
                     </div>
-                    <textarea name="" id="" cols="0" rows="10" class="contact__input" required></textarea>
+                    <textarea name="message" id="" cols="0" rows="10" class="contact__input" required></textarea>
                     <input type="submit" value="Send" class="contact__button">
                 </form>
             </div>
@@ -166,11 +168,10 @@
             </div>
         </footer>
 
-    <!-- EmailJS -->
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js"></script>
     <!-- ScrollReveal -->
     <script src="https://unpkg.com/scrollreveal"></script>
     <!-- JS -->
     <script src="assets/js/main.js"></script>
+    <script src="assets/js/email.js"></script>
 </body>
 </html>
