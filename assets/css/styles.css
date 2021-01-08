@@ -202,12 +202,15 @@ img{
     writing-mode: vertical-lr;
     transform: rotate(-180deg);
     color: var(--white-color);
+    padding-top: 1rem;
 }
 .home__img{
     position: absolute;
     right: 0;
     bottom: 0;
-    width: 295px;
+    width: 12.5rem;
+    margin-right: 10px;
+    
 }
 
 /* ===== ABOUT =====*/
@@ -382,7 +385,7 @@ img{
 }
 
 /* ===== MEDIA QUERIES =====*/
-@media screen and (min-width: 768px){
+@media screen and (min-width: 650px){
     body{
         margin: 0;
     }
@@ -426,7 +429,7 @@ img{
         row-gap: 0;
     }
     .home__img{
-        width: 524px;
+        width: 21rem;
         right: 10%;
     }
 
@@ -473,5 +476,8 @@ img{
     .bd-grid{
         margin-left: auto;
         margin-right: auto;
+    }
+    .home__img{ 
+    width: 23rem; 
     }
 }
