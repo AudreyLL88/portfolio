@@ -154,12 +154,13 @@ Please click here to see my database scheme made with [**QuickDBD**](https://www
 
 ### Defensive Design ###
 
-In order to use best practices and make this website easy to navigate for all users even when they try to perform an action that their status does not allow them, a few sall but important features have been added:
 
-1. All required form inputs display a warning message (tooltip)or feedback if the field has been filled incorrectly or not filled.
-2. If a user tries to commit an action that their status does not allow them to, according feedback will be displayed.
-3. Webhooks have been implemented to avoid user error during checkout process and will create the order status in the database.
-4. Custom 404, 403, 500 error pages with redirection to homepage.
+1. All required form inputs display a warning message as a tooltip if the field is filled incorrectly.
+2. If a non-registered user tries to leave a comment or a review, they will be automatically redirected to the sign-in page.
+3. If a user tries to put a number of a single product greater than the stock, a warning message will be displayed and the add to bag action is cancelled.
+4. Every time a form is submitted (search, product, review, comment), the user is informed of the action success/failure through a toast message.
+5. Implementation of webhooks to create order status in the database and avoid any misstep from the user during checkout.
+6. Custom error pages redirecting to homepage.
 
 
 <a name="technologies"></a>
@@ -236,11 +237,12 @@ In order to use best practices and make this website easy to navigate for all us
 
 **Shopping bag App**
 
-*
+* This feature allows the user to add/adjust/delete different products to the shopping bag and view the total price and details in the bag.
+* When a product is added, a preview of the shopping bag is displayed in a toast and the total price/shipping price is updated.
 
 **Checkout App**
 
-* This feature allows the user to buy the selection of item previously put in the bag.
+* This feature allows the user to safely buy the selection of item previously put in the bag thanks to **Stripe**.
 * The user doesn't need to be logged in to buy products. If logged in the shipping details will be filled from the details given in the user profile. 
 * If no details where given or a detail is changed in the checkout form when logged in, the user has the possibility to check the Remember checkbox and all details will be updated in the profile app.
 * The credit card details section is linked to the payment platform **Stripe** to ensure a secure payment procedure. 
@@ -251,12 +253,27 @@ In order to use best practices and make this website easy to navigate for all us
 
 **Product App**
 
-*
+* This feature allows the user to see all products and their details on the website. The user can also read product reviews as well as Add/Edit/Delete their product review if they are logged in. It also allows the admin to Add/Edit/Delete products in the database.
+
+1. Products page:
+* The user can browse by product categories that are on the website through the navigation bar. A keyword search can also be conducted in the navigation bar search box to browse items more specifically.
+* The products displayed can be sorted out by alphabetical order and price thanks to the selector under the page title.
+
+2. Product detail page:
+* This page displays all the product details (name, category, image, description, price, sizes if any) as well as the review section. All users can visit the product details and read the reviews but need the be registered and logged in to leave a review and a rating.
+
+3. Review/rating section
+* When logged in the user can edit and delete their review and rating directly from the review section. The edit link  redirects to an edit form while the delete link triggers a confirmation modal and deletes the review forever if "Delete" is clicked in the modal.
+* To add a review and a rating, the user can click on the "Leave a review" button and will be redirected to the add review page and fill a simple form. Once the form is filled and the user clicked the "Submit" button, they will be redirected to the product page.
+
+4. Product management:
+* If the user is logged in as an admin, they will have the possibility to navigate to the Product management page (through the profile dropdown menu in the main navigation bar) and have the possibility to add a product to the database by filling the add product form. Images can be selected directly from the user's computer and not only as url linked images.
+* The admin only can edit and/or delete any product by navigating on a product detail page and click on the edit/delete links.The edit link redirects to a edit form while the delete link triggers a confirmation modal and permanently deletes the product from the database if "Delete" is clicked in the modal.
 
 
 **Profile App**
 
-* The feature allows the user to create a custom profile on the website and be given registered user priviledges (comments, reviews, checkout details)
+* This feature allows the user to create a custom profile on the website and be given registered user priviledges (comments, reviews, checkout details)
 1. Registration
 * The user can register to the website through the Register form page. Every account requests an email address , a username and a password.
 * The email and password need to be confirmed twice to avoid typos.
@@ -283,22 +300,21 @@ In order to use best practices and make this website easy to navigate for all us
 * This page can be accessed through the navigation menu and displays all blog posts by date, the blog cards include an image, a title, a content preview and the date/author.
 
 2. Blog detail page:
-* This page display the full blog post (title, image, text, author and date) as well as the comment section. All user can read the blog post and comments but need the be registered and logged in to comment.
-* When logged in the user can edit and delete their comment directly from the comment section.
+* This page display the full blog post (title, image, text, author and date) as well as the comment section. All users can read the blog post and comments but need the be registered and logged in to comment.
 
 3. Comment section
-* When logged in the user can edit and delete their comment directly from the comment section.The edit link  redirects to a edit form while the delete link throws a confirmation modal and deletes the comment forever if "Delete" is clicked in the modal.
-* To add a comment, the user can click on the "Leave a comment button" and will be redirected to the add comment page and fill a simple form. Once the form is filled and the user clicked the "Submit" button, they will be redirected to the blog page.
+* When logged in the user can edit and delete their comment directly from the comment section.The edit link redirects to a edit form while the delete link triggers a confirmation modal and permanently deletes the comment if "Delete" is clicked in the modal.
+* To add a comment, the user can click on the "Leave a comment" button and will be redirected to the add comment page and fill a simple form. Once the form is filled and the user clicked the "Submit" button, they will be redirected to the blog page.
 
 4. Blog management:
-* If the user is logged in as an admin, they will have the possibility to navigate to the Blog management page (through the profile dropdown menu in the main navigation bar) and have to possibility to add a blog post to the blog by filling the form. Images can be selected directly from the user's computer and not only as url linked images.
+* If the user is logged in as an admin, they will have the possibility to navigate to the Blog management page (through the profile dropdown menu in the main navigation bar) and have the possibility to add a blog post to the blog page/database by filling the add blog post form. Images can be selected directly from the user's computer and not only as URL linked images.
 * The admin only can edit and/or delete any blog post by navigating by a blog detail page and click on the edit/delete links.The edit link  redirects to a edit form while the delete link throws a confirmation modal and deletes the post forever if "Delete" is clicked in the modal.
 
 **Contact App**
 
 * This feature allows the user to contact the website's admin and send queries.
 
-* Contact page: Allows the user to send a written query to the site admin. the query is stored in the database and two email alerts are sent: one to the user to confirm that the message was received and one to the admin to signal the reception of a new query. The alert sent to the admin contains all informations given by the user in the contact form.
+* The Contact page allows the user to send a written query to the admin. The query is stored in the database and two email alerts are sent: one to the user to confirm that the message was received and one to the admin to signal the reception of a new query. The alert sent to the admin contains all informations given by the user in the contact form.
 * The user does not need to be a registered user to send a query.
 
 
@@ -306,6 +322,10 @@ In order to use best practices and make this website easy to navigate for all us
 
 ### Future Features ###
 
+* The possibility to add different stock per product sizes.
+* Answering messages sent through contact form via the website.
+* Sale prices.
+* Social Media login.
 
 ## Deployment ##
 ---
