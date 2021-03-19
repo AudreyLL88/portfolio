@@ -49,7 +49,7 @@ I also took went to [**Awwwards.**](https://www.awwwards.com/) for front-end ins
 
 After viewing the Boutique Ado mini project, I decided to organize the user stories of this project in a spreadsheet rather then listing them here as they are extensive and a spreadsheet was also easier for me to follow through the development of this project.
 
-Please click here to discover the User Stories.
+Please [**click here**](https://docs.google.com/spreadsheets/d/1Jjwrl0Z5zI8jjJYmJ2XXgHS7ZZPKOzklTGwQ07svR-o/edit?usp=sharing) to discover the User Stories.
 
 <a name="strategy"></a>
 ### Strategy Goals ###
@@ -349,9 +349,9 @@ Please click here to see my database scheme made with [**QuickDBD**](https://www
 
 **1. Clone from Github**
 
-* One can run this project locally on their IDE of choice by saving a copy of the Github repository at https://github.com/AudreyLL88/chelsea_wolfe_v1.git by clicking the "Download Code" button or by running this command in their IDE command line:
+* One can run this project locally on their IDE of choice by saving a copy of the Github repository at https://github.com/AudreyLL88/cw_store.git by clicking the "Download Code" button or by running this command in their IDE command line:
 
-$ git clone https://github.com/AudreyLL88/chelsea_wolfe_v1.git
+$ git clone https://github.com/AudreyLL88/cw_store.git
 
 To remove any link to github, one can use the command git remote rm origin into their terminal.
 
@@ -551,7 +551,9 @@ All products images were taken from the offical Chelsea Wolfe US and EU stores:
 * This website was made following the tutorials of Code institute for the Boutique Ado project by Chris Zielinski.
 
 * The hero animation:
-* The Login/Sign in form.
+* The product detail animation
+* The footer:
+* The product size code:
 
 
 **Many thanks to:**
