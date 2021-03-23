@@ -546,14 +546,15 @@ All products images were taken from the offical Chelsea Wolfe US and EU stores:
 - https://www.hellomerch.com/collections/chelsea-wolfe
 - https://evilgreed.net/collections/chelsea-wolfe
 
-**Tutorials**
+**Code Tutorials**
 
 * This website was made following the tutorials of Code institute for the Boutique Ado project by Chris Zielinski.
 
-* The hero animation:
-* The product detail animation
-* The footer:
-* The product size code:
+* The hero animation was inspired by the [**BedimCode Tutorial**](https://www.youtube.com/watch?v=PLp46cA0Ep8) and heavily edited to fit the project.
+* The product detail animation was inspired by [**Codevo tutorial**](https://www.youtube.com/watch?v=FntCLDXQZfs) and heavily edited to fit the project.
+* The product cards were inspired by [**Oscar's Codepen**](https://codepen.io/olhilton/pen/dXaqxE) and heavily edited to fit the project.
+* The footer was inspired from [**This CodePen**](https://codepen.io/olhilton/pen/dXaqxE) and heavily edited to fit the project.
+* The product size and contact form code is partially inspired by [**Kevin Bourke's Fullstack project**](https://github.com/Bourkekev/ms4-power-fitness-gym) and modified to fit with the stock availability.
 
 
 **Many thanks to:**
