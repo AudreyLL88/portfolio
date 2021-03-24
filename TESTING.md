@@ -9,11 +9,12 @@
 * 2. [Colour Contrast Checking](#colour)
 * 3. [Manual testing](#manual)
         * [Viewing and Navigation](#viewing)
-        * [Registration](#registration)
+        * [Registration and Accounts](#registration)
         * [Product sorting and searching](#searching)
-        * [Product reviews](#reviews)
-        * [Blog comments](#blog)
-        * [Contact](#contact)
+        * [Purchase and Checkout](#purchase)
+        * [Admin and Store Management](#admin)
+        * [Stripe](#stripe)
+        *
 
 * 4.[Back End Admin](#backend)
 * 5.[Issues](#issues)
@@ -42,6 +43,8 @@ It raised the following errors:
 I used the Gitpod built-in linter and [**PEP8**] to validate my Python files.
 It raised the following issues:
 
+**Google Lighthouse**
+
 <a name="colour"></a>
 ## Colour Contrast Checking ## 
 ---
@@ -51,130 +54,121 @@ I struggled a fair bit to find the right color scheme as I've tend to choose col
 <a name="manual"></a>
 ## Manual Testing ## 
 ---
+
+
 **1. Viewing and Navigation**
 
 a. As a shopper I want to be able to browse and view the product list.
 
 * Expected: site expected to display functional product templates and navigation bars when the user is navigating the website.
-* Testing:
-* Result:
+* Testing: Navigated through the navigation bar and clicked on all navigation links to verify that corresponding product cards with correct informations are displayed. Navigated to 'All products ' to check that all the products added to the database were displayed.
+* Result: The site acted as expected, displayed all the product cards accordingly and code 200 in the terminal.
 
 b. As a shopper I want to be able to check individual product details such as price, size, category and description.
 
 * Expected: site expected to display correct product detail template when the user clicks on a specific product card.
-* Testing:
-* Result:
+* Testing: Clicked on a product page and  was directed to the product page details, verified that all product data was correctly displayed as well as the GSAP animation and that dropdowns and selectors were functional.
+* Result: The site acted as expected, displayed all product data correctly, the GSAP animation works and all dropdown/selectors are functional (size field is displayed only on clothing items). Showed code 200 in the terminal.
 
 c. As a shopper I want to be able to easily go through my bag content and total cost of my order.
 
 * Expected: site expected to allow non-registered users to add items to their bag, display the right total/individual costs and shipping costs.
-* Testing:
-* Result:
+* Testing: Added a product to the bag and checked that it was correctly displayed in the bag toast with no bugs then clicked on the 'Secure Chekout' button to navigate to the bag page. Verified if all product data shows and that the shipping cost and product cost add up correctly.
+* Result: The site acted as expected and displayed correct informations in the bag toast as well as the bag template. Showed Code 200 in the terminal.
 
 
 d. As a shopper I want to be able to read product reviews.
 
 * Expected: site expected to display reviews affiliated to the product that the user is viewing.
-* Testing:
-* Result:
+* Testing: Navigated to the product detail template for different products and made sure that the reviewing section was displaying affiliated reviews / ratings and that the on scroll animation works as well.
+* Result: Site acted as expected and displayed the affiliated reviews to the products. Shows code 200 in the terminal.
 
 e. As a shopper I want to be able to read blog posts and comments.
 
 * Expected: site expected to display all blog pages and affiliated comments when the user navigates to the blog section.
-* Testing:
-* Result:
+Testing: Navigated to the blog detail template for different blog posts anck checked that all details are displayed accordingly as well as the GSAP animation, made sure that the comment section was displaying affiliated comments and that the on scroll animation works as well.
+* Result: Site acted as expected and displayed blog posts correctly and the affiliated comments as well. Shows code 200 in the terminal.
 
-f. As a shopper I want to be able to get suggested products.
-
-* Expected: site expected to display a selection of products based on the category of the product currently viewed by the user.
-* Testing:
-* Result:
 
 **2. Registration and Accounts**
 
 a. As a site user I want to be able to register for an account.
 
 * Expected: site expected to allow user to register for an account when valid email and password are entered in the form by the user.
-* Testing:
-* Result:
+* Testing: Navigated to the Register template by clicking on the User icon in the navigation bar. Checked that the registration form displays Log In link and then tested email and password confirmation fields to see if defensive tooltips worked and tried to submit an empty form to test defensive design. Clicked on 'Submit' button and was directed to the verification email template then checked the terminal for the verification link (sent in an email when the website is deployed on Heroku) and confirmed the email address.
+* Result: Site acted as expected, allowed all registration steps without trouble and creates a user profile both in the database and on the website. Shows code 200 in the terminal.
 
 b. As a site user I want to be able to login or logout of my account.
 
 * Expected: site expected to display functional login and logout pages when the user navigate to them.
-* Testing:
-* Result:
+* Testing: Used the new user profile created for testing to navigate to the Log In page and tested the tooltips by trying to submit an empty field as well as submitting a wrong username/email/password. Entered correct log in details and clicked submit then was redirected to homepage. Navigated to the User icon in the navigation bar and selected Log Out in the dropdown menu. Clicked on 'Log Out' button in confirmation template.
+* Result: Site acted as expected in both scenario and allowed the user to log in and log out without trouble. Shows 200 code in the terminal.
 
 c. As a site user I want to be able to recover my password if necessary.
 
 * Expected: site expected to send a 'recover password' email with link to change password page when the user clicks the 'Forgot password' link on login page and enters their email address.
-* Testing:
-* Result:
-
-d. As a site user I want to be able to have a confirmation email after my registration.
-
-* Expected: site expected to send a confirmation email after the user verifies their email for registration.
-* Testing:
-* Result:
+* Testing: Cliked on the 'Forgot password' link and entered the test user email address in the password reset template. Checked the terminal for the verification link, navigated to the change password template and entered a new password in the affiliated field and confirmation field.
+* Result: Site acted as expected and the user password was changed safely. Shows 200 code in the terminal.
 
 e. As a site user I want to be able to have a customizable profile.
 
 * Expected: site expected to display an editable profile detail form when user is on their profile page.
-* Testing:
-* Result:
+* Testing: Navigated to the My Profile template in the dropdown menu of the User section in the navigation bar. Verified that the username was displayed as well as the editable user detail form and that changes were saved when the after the edit button was clicked.
+* Result: Site acted as expected and displayed the custom profile template as well as a functional user details form. Shows code 200 in the terminal.
 
 f. As a site user I want to be able to create a product review.
 
 * Expected: site expected to add a new product review when the review form is submitted by the user.
-* Testing:
-* Result:
+* Testing: Navigated as a registered user to a product detail page and clicked on the "leave a review" button to access the review form. Filled all the review form fields and clicked on the 'Submit' button.
+* Result: Site acted as expected and displayed the new review details and rating in the review section of the product detail page. Shows code 200 in the terminal.
 
 g. As a site user I want to be able to edit my product review.
 
 * Expected: site expected to display the edit form after the user clicks the edit button and save all changes made to the product review when the 'submit' button is clicked.
-* Testing:
-* Result:
+* Testing: Navigated as a registered user to a product review written by me, clicked on the 'edit' icon button. Checked that the edit form was pre-filled with the previous review details and changed a few things in all fields to test that all changes would be saved after cliking the submit button.
+* Result: Site acted as expected and saved/displayed all new informations in the updated product review. Shows code 200 in the terminal.
 
 i. As a site user I want to be able to delete my product review.
 
 * Expected: site expected to permanently delete a product review from the review section when the 'delete review' button is clicked by the user.
-* Testing:
-* Result:
+* Testing: Navigated as a registered user to a product review written by me, clicked on the 'delete' icon button. Clicked on the 'delete button' on the confirmation modal.
+* Result: Site acted as expected and deleted the review from the database and the product detail review section. Shows code 200 in the terminal.
 
 j. As a site user I want to be able to create a blog comment.
 
 * Expected: site expected to add a new blog comment when the comment form is submitted by the user.
-* Testing:
-* Result:
+* Testing: Navigated as a registered user to a blog post page and clicked on the "leave a comment" button to access the comment form. Filled all the comment form fields and clicked on the 'Submit' button.
+* Result: Site acted as expected and displayed the new comment in the review section of the Blog post page. Shows code 200 in the terminal.
 
 k. As a site user I want to be able to edit my blog comment.
 
 * Expected: site expected to display the edit form after the user clicks the edit button and save all changes made to the blog comment when the 'submit' button is clicked.
-* Testing:
-* Result:
+* Testing: Navigated as a registered user to a blog comment written by me, clicked on the 'edit' icon button. Checked that the edit form was pre-filled with the previous comment details and changed a few things in all fields to test that all changes would be saved after cliking the submit button.
+* Result: Site acted as expected and saved/displayed all new informations in the updated pblog comment. Shows code 200 in the terminal.
 
 l. As a site user I want to be able to delete my blog comment.
 
 * Expected: site expected to permanently delete a blog comment from the store's blogpost when the 'delete comment' button is clicked by the user.
-* Testing:
-* Result:
+* Testing: Navigated as a registered user to a blog comment written by me, clicked on the 'delete' icon button. Clicked on the 'delete button' on the confirmation modal.
+* Result: Site acted as expected and deleted the comment from the database and the blog post comment section. Shows code 200 in the terminal.
 
-m. As a site user I want to be able to contact customer's support.
+m. As a shopper I want to be able to contact customer's support.
 
 * Expected: site to diplay a functional contact page and send email confirmation when the user sends a query through the contact form.
-* Testing:
-* Result:
+* Testing: Navigated to the Contact page through the navigation bar. First tried to submit an empty form to see if the defensive tooltips were working then filled all required fields and clicked the submit button.
+* Result: Site acted as expected and sent a confirmation email to the user as well as the admin. Shows code 200 in terminal.
 
 n. As a site user I want to be able to check my order history.
 
 * Expected: site expected to display order history details when the user is on their profile.
-* Testing:
-* Result:
+* Testing: Navigated as a registered user to the My Profile section in the navigation bar and scrolled down after the form to check if all informations of previous orders were displayed in the Order History section and clicking the order numbers.
+* Result: Site acted as expected and displayed all order history informations and functional links directing to the previous confirmation screens of each orders. Shows code 200 in terminal.
 
 o. As a site user I want to be able to check my review history.
 
 * Expected: site expected to display review history details when the user is on their profile.
-* Testing:
-* Result:
+* Testing: Navigated as a registered user to the My Profile section in the navigation bar and scrolled down after the form to check if all informations of previous written reviews were displayed in the Review History section.
+* Result: Site acted as expected and displayed all review history informations and functional delete and edit buttons. Shows code 200 in terminal.
 
 **3. Sorting and Searching**
 
@@ -184,17 +178,17 @@ a. As a shopper I want to be able to sort the list of available products .
 * Testing:
 * Result:
 
-b. As a shopper I want to be able to sort products by  categories, alphabetical order or price. 
+b. As a shopper I want to be able to sort products by categories, alphabetical order or price. 
 
 * Expected: site to sort product on page when the shopper makes use of the sort selector.
-* Testing:
-* Result:
+* Testing: Navigated to All products page in the navigation bar and sorted products by category, Alphabetical order, reverse Alphabetical order and price using the selector on the left side of the screen.
+* Result: Site acted as expected and sorted all products according to the selection made. Shows code 200 in the console.
 
 c. As a shopper I want to be able to search for a product by name, category or description .
 
 * Expected: site to display the search results by name, category or description when the user uses the search bar.
-* Testing:
-* Result:
+* Testing: Used the search bar at the top of the page and conducted various queries by name, words present in descriptions and category to ensure that according products were displayed. 
+* Result: Site acted as expected and displayed the correct products according to the search effected.
 
 **4. Purchasing and Checkout**
 
