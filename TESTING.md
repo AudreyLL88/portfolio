@@ -287,3 +287,23 @@ j. As an admin I want to be able to be notified when a customer send a query thr
 <a name="issues"></a>
 ## Issues ## 
 ---
+
+Most of my issues were typos and margins/padding to fix to avoid overflow or make the website responsive but I did encounter a few interesting challenges along the way:
+
+**1. Webhook Handlers.**
+
+Like many, I had troubles while testing my webhook handler locally. The code used for the webhook handler is identical to the Boutique Ado project as I coded along the videos. However, no matter what I would do, the webhook keep failing the test in the Stripe console. I turned to the Slack Community to check if someone had the same problem.It turns out that it is important to **make your port public** while running your server to be able to test the webhook correctly. It was not an issue in the code but in the execution.
+
+**2. Product stock.**
+
+One of the feature of this project allows the Store admin to set a an available stock per product in the database. I noticed that it created a problem in the database as shoppers could still buy after the available store reached 0. I fixed it by adding an if statement in the add_to_bag view to prevent the buyer to add more items in the bag than there is in stock. The stock is updated after a successful checkout and could use some improvement in the future.
+
+**3. Deleting a product.**
+
+While testing the delete product functionality, I noticed that the app would crash if I was trying to delete a product that was added to the bag. I fixed it by adding an if statement that check if the selected product is in the bag and removes it before deleting it to avoid everything to crash again.
+
+**4. Sizes always showing in the add/edit product form**
+
+Implementing sizes on all clothing items was straightfoward enough, but disabling the sizes form fields in the product management form was not. I fixed it by using an if statement checking the ID of the item category and disabling the fields if the ID doesn't correspond to a clothing item ID. This code could use some refinement and is a temporary fix.
+
+
