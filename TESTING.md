@@ -58,36 +58,48 @@ I struggled a fair bit to find the right color scheme as I've tend to choose col
 
 **1. Viewing and Navigation**
 
-a. As a shopper I want to be able to browse and view the product list.
+a. As a shopper I want to be able understand the purpose of the website and have preview of the items that are sold..
+
+* Expected: site expected to display functional landing page with hero animation, featured products, about the artist section and bottom banner.
+* Testing: Navigated to the index page of the website and verified that all animations were functional, that the call to action button linked to the products page and that all external links were open in separate pages. I also checked that the featured products were selected on random by refreshing the page several times.
+* Result: The site acted as expected and displayed all sections of the landing page, the random featured products and the external links correctly.
+
+b. As a shopper I want to be able to browse and view the product list.
 
 * Expected: site expected to display functional product templates and navigation bars when the user is navigating the website.
-* Testing: Navigated through the navigation bar and clicked on all navigation links to verify that corresponding product cards with correct informations are displayed. Navigated to 'All products ' to check that all the products added to the database were displayed.
-* Result: The site acted as expected, displayed all the product cards accordingly and code 200 in the terminal.
+* Testing: Navigated through the navigation bar and clicked on all navigation links to verify that corresponding product cards with correct informations are displayed. Navigated to 'All products ' to check that all the products added to the database were displayed and that the 'back to top' arrow button was functional by clicking on it while being at the bottom of the page.
+* Result: The site acted as expected, displayed all the product cards accordingly as well as the button and code 200 in the terminal.
 
-b. As a shopper I want to be able to check individual product details such as price, size, category and description.
+c. As a shopper I want to be able to check individual product details such as price, size, category and description.
 
 * Expected: site expected to display correct product detail template when the user clicks on a specific product card.
-* Testing: Clicked on a product page and  was directed to the product page details, verified that all product data was correctly displayed as well as the GSAP animation and that dropdowns and selectors were functional.
+* Testing: Clicked on a product page and  was directed to the product page details, verified that all product data was correctly displayed as well as the GSAP animation and that dropdowns and selectors were functional. Checked if the availability was displayed correctly depending on the amount of product available.
 * Result: The site acted as expected, displayed all product data correctly, the GSAP animation works and all dropdown/selectors are functional (size field is displayed only on clothing items). Showed code 200 in the terminal.
 
-c. As a shopper I want to be able to easily go through my bag content and total cost of my order.
+d. As a shopper I want to be able to easily go through my bag content and total cost of my order.
 
 * Expected: site expected to allow non-registered users to add items to their bag, display the right total/individual costs and shipping costs.
 * Testing: Added a product to the bag and checked that it was correctly displayed in the bag toast with no bugs then clicked on the 'Secure Chekout' button to navigate to the bag page. Verified if all product data shows and that the shipping cost and product cost add up correctly.
 * Result: The site acted as expected and displayed correct informations in the bag toast as well as the bag template. Showed Code 200 in the terminal.
 
 
-d. As a shopper I want to be able to read product reviews.
+e. As a shopper I want to be able to read product reviews.
 
 * Expected: site expected to display reviews affiliated to the product that the user is viewing.
 * Testing: Navigated to the product detail template for different products and made sure that the reviewing section was displaying affiliated reviews / ratings and that the on scroll animation works as well.
 * Result: Site acted as expected and displayed the affiliated reviews to the products. Shows code 200 in the terminal.
 
-e. As a shopper I want to be able to read blog posts and comments.
+f. As a shopper I want to be able to read blog posts and comments.
 
 * Expected: site expected to display all blog pages and affiliated comments when the user navigates to the blog section.
 Testing: Navigated to the blog detail template for different blog posts anck checked that all details are displayed accordingly as well as the GSAP animation, made sure that the comment section was displaying affiliated comments and that the on scroll animation works as well.
 * Result: Site acted as expected and displayed blog posts correctly and the affiliated comments as well. Shows code 200 in the terminal.
+
+g. As a shopper I want to be able to get suggested products.
+
+* Expected: site expected to display suggested produts at the bottom of the product detail page depending on the category of the product being viewed.
+Testing: Navigated a category of product and selected one. Scrolled down to the bottom of the page to verify if suggested product section was functional and was displaying product cards of the same category.
+* Result: Site acted as expected and displayed suggested products of the same category.
 
 
 **2. Registration and Accounts**
@@ -172,19 +184,13 @@ o. As a site user I want to be able to check my review history.
 
 **3. Sorting and Searching**
 
-a. As a shopper I want to be able to sort the list of available products .
-
-* Expected: 
-* Testing:
-* Result:
-
-b. As a shopper I want to be able to sort products by categories, alphabetical order or price. 
+a. As a shopper I want to be able to sort products by categories, alphabetical order or price. 
 
 * Expected: site to sort product on page when the shopper makes use of the sort selector.
 * Testing: Navigated to All products page in the navigation bar and sorted products by category, Alphabetical order, reverse Alphabetical order and price using the selector on the left side of the screen.
 * Result: Site acted as expected and sorted all products according to the selection made. Shows code 200 in the console.
 
-c. As a shopper I want to be able to search for a product by name, category or description .
+b. As a shopper I want to be able to search for a product by name, category or description .
 
 * Expected: site to display the search results by name, category or description when the user uses the search bar.
 * Testing: Used the search bar at the top of the page and conducted various queries by name, words present in descriptions and category to ensure that according products were displayed. 
@@ -192,97 +198,87 @@ c. As a shopper I want to be able to search for a product by name, category or d
 
 **4. Purchasing and Checkout**
 
-a. As a shopper I want to be able to select the size and quantity of a product before putting it in my bag. .
+a. As a shopper I want to be able to view items in my shopping bag. .
 
-* Expected: site expected to allow the user to select a size if any and a quantity by clicking on the according fields on the product detail page.
-* Testing:
-* Result:
+* Expected: site expected to allow non-registered and registered users to add items to their bag, display the right total/individual costs and shipping costs.
+* Testing: Added a product to the bag and checked that it was correctly displayed in the bag toast with no bugs then clicked on the 'Secure Chekout' button to navigate to the bag page. Verified if all product data shows and that the shipping cost and product cost add up correctly.
+* Result: The site acted as expected and displayed correct informations in the bag toast as well as the bag template. Showed Code 200 in the terminal.
+:
 
-b. As a shopper I want to be able to view items in my shopping bag. .
-
-* Expected: site expected to display all bag content on toast when the user add a product to the bag and when the user click on the bag icon to view the bag page.
-* Testing:
-* Result:
-
-c. As a shopper I want to be able to modify the quantity of items in the bag before checkout. 
+b. As a shopper I want to be able to modify the quantity of items in the bag before checkout. 
 
 * Expected: site expected to modify/change the product quantity when the user clicks on the quantity selector.
-* Testing:
-* Result:
+* Testing: Navigated to the bag template after adding a couple of items. Changed the amount of items for each by using the selector. Tested the remove option to check that the item was removed from the bag. Checked if the global cost and shipping was updated.
+* Result: The site acted as expected and updated the number of items as well as the global and shipping costs. Shows 200 code in the terminal.
 
-d. As a shopper I want to be able to buy products by card safely.
+c. As a shopper I want to be able to buy products by card safely.
 
-* Expected: site expected to use the Stripe API to deal with payment when the user enters their credit card informations.
-* Testing:
-* Result:
+* Expected: site expected to display existing user address if the user is registered and use the Stripe API to deal with payment when the user enters their credit card informations.
+* Testing: Navigated as a registered user to the checkout page from the bag page by clicking on the checkout button. Checked if the delivery address was pre-filled from the user details given previously. Entered wrong card details to check if the payment would fail and then filled the card details with the Stripe test code. I also went on my Stripe account in a separate page to check if the webhooks were working by looking at the webhook attempts in the developer panel.
+* Result: Site acted as expected and displayed error message when the payment failed. It displayed the loading spinner while the payment was being processed and all webhook passed the tests in the Stripe webhook panel.
 
-e. As a shopper I want to be able to view an order confirmation after the purchase.
+d. As a shopper I want to be able to view an order confirmation after the purchase.
 
 * Expected: site expected to display a confirmation page when the shopper's payment is successful
-* Testing:
-* Result:
+* Testing: Used the Stripe card details to test a successful payment and waited after the loading spinner to check if the order confirmation page was loading with all order and shipping details.
+* Result: Site acted as expected and displayed the order confirmation page right after the loading spinner with all correct order informations.
 
-f. As a shopper I want to be able to receive a confirmation email after checkout .
+e. As a shopper I want to be able to receive a confirmation email after checkout .
 
 * Expected: site expected to send an automated confirmation email with all order details to the customer after the shopper has paid.
-* Testing:
-* Result:
+* Testing: When testing locally, I checked the gitpod terminal after successful checkout while running the server to see if the confirmation message with all order information was sent. When testing after deployment I navigated to the temporary email adresse given as a test user email address to check if the confirmation email was received.
+* Result: Site acted as expected in both scenarios and sent the confirmation email with all correct order informations.
 
 **5. Admin and Store Management**
 
 a. As an admin I want to be able to add a product to the store.
 
 * Expected: site expected to add a new product when the blog form is submitted by the admin.
-* Testing:
-* Result:
+* Testing: Logged in as a superuser and navigated to the product management page section in the User Profile dropdown menu in the navigation bar. Filled all required fields for different products, checked if the size section was disabled if the product is not a clothing item and checked if the image field allowed to select an image from my computer and clicked the submit button.
+* Result: Site acted as expected and added a new product to the database and the store with or without sizes and image.
 
 b. As an admin I want to be able to edit a product from store .
 
 * Expected: site expected to display the edit form after the admin clicks the edit button and save all changes made to the product when the 'submit' button is clicked.
-* Testing:
-* Result:
+* Testing: Navigated as a superuser to the edit form by clicking on the Edit button (available on the product cards and in the product detail template). Checked if the form was filled with previous data, and tried to change a few fields including the image then clicked submit.
+* Result: Site acted as expected and saved all changed product informations to the database and the website.
 
 c. As an admin I want to be able to to delete a product from store .
 
 * Expected: site expected to permanently delete a product from the store when the 'delete product' button is clicked by the admin.
+* Testing: Navigated as a superuser to the delete modal by clicking on the delete button (available on the product cards and in the product detail template). Clicked on the Delete button in the modal.
+* Result: Site acted as expected and deleted the product from the database and the website.
+
+d. As an admin I want to be able to set the available stock of a product and be informed if the stock is low.
+
+* Expected: site expected to update a defined amount of available product in the database when a product is added or edited and send a email notification when a product is low in stock.
 * Testing:
 * Result:
 
-d. As an admin I want to be able to set the available stock of a product .
-
-* Expected: 
-* Testing:
-* Result:
-
-e. As an admin I want to be able to make a product unavailable until further notice .
-
-* Expected: site expected to display the product status after the admin set the available stock for a product.
-* Testing:
-* Result:
 
 f. As an admin I want to be able to create a blog post for the blog .
 
 * Expected: site expected to add a new blog post when the blog form is submitted by the admin.
-* Testing:
-* Result:
+* Testing: Logged in as a superuser and navigated to the blog management page section in the User Profile dropdown menu in the navigation bar. Filled all required fields and checked if the image field allowed to select an image from my computer by clicking and selecting an image and clicked the submit button.
+* Result: Site acted as expected and added a new blog post to the database and the website.
 
 g. As an admin I want to be able to edit a blog post.
 
 * Expected: site expected to display the edit form after the admin clicks the edit button and save all changes made to the blog post when the 'submit' button is clicked.
-* Testing:
-* Result:
+* Testing: Navigated as a superuser to the edit form by clicking on the Edit button (available in the blog post page). Checked if the form was filled with previous data, and tried to change a few fields including the image then clicked submit.
+* Result: Site acted as expected and saved all changed blog post informations to the database and the website.
 
 i. As an admin I want to be able to delete a blog post .
 
 * Expected: site expected to permanently delete a blog post from the store's blog when the 'delete post' button is clicked by the admin.
-* Testing:
-* Result:
+* Testing: Navigated as a superuser to a blog post page and clicked on the delete button. Confirmed that I want to delete the post by clicking delete again in the modal.
+* Result: Site acted as expected and deleted the blog post froö the database and the website.
 
 j. As an admin I want to be able to be notified when a customer send a query through the contact form.
 
 * Expected: site expected to send an email to the admin with all contact form informations when contact form is used by a customer.
-* Testing:
-* Result:
+* Testing: When testing locally: Navigated to the contact page, filled the contact form and clicked send then I looked into the Gitpod terminal to check if the contact form informations were sent to the admin email and correctly displayed.
+* Result: Site acted as expected and displayed the email with all the contact form information in the Gitpod terminal. 
 
 <a name="admin"></a>
 ## Back end Admin ## 

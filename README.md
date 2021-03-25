@@ -157,10 +157,12 @@ Please click here to see my database scheme made with [**QuickDBD**](https://www
 
 1. All required form inputs display a warning message as a tooltip if the field is filled incorrectly.
 2. If a non-registered user tries to leave a comment or a review, they will be automatically redirected to the sign-in page.
-3. If a user tries to put a number of a single product greater than the stock, a warning message will be displayed and the add to bag action is cancelled.
-4. Every time a form is submitted (search, product, review, comment), the user is informed of the action success/failure through a toast message.
-5. Implementation of webhooks to create order status in the database and avoid any misstep from the user during checkout.
-6. Custom error pages redirecting to homepage.
+3. Add to bag button disabled if the product is out of stock.
+4. If a user tries to put a number of a single product greater than the stock, a warning message will be displayed and the add to bag action is cancelled.
+5. Every time a form is submitted (search, product, review, comment), the user is informed of the action success/failure through a toast message.
+6. Implementation of webhooks to create order status in the database and avoid any misstep from the user during checkout.
+7. Custom error pages redirecting to homepage.
+8. Default images for blog posts and products if the image selected is broken or if no image was selected.
 
 
 <a name="technologies"></a>
