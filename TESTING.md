@@ -54,7 +54,7 @@ I struggled a fair bit to find the right color scheme as I've tend to choose col
 
 **1. Viewing and Navigation**
 
-a. As a shopper I want to be able understand the purpose of the website and have preview of the items that are sold..
+a. As a shopper I want to be able understand the purpose of the website and have preview of the items that are sold.
 
 * Expected: site expected to display functional landing page with hero animation, featured products, about the artist section and bottom banner.
 * Testing: Navigated to the index page of the website and verified that all animations were functional, that the call to action button linked to the products page and that all external links were open in separate pages. I also checked that the featured products were selected on random by refreshing the page several times.
