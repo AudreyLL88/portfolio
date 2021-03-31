@@ -17,7 +17,7 @@
         * [Fonts](#fonts)
         * [Icons](#icons)
     * [Stripe Functionnality](#stripe)
-    * [Database Scheme](#dbscheme)
+    * [Database Schema](#dbscheme)
     * [Defensive Design](#defensivedesign)
 * [Technologies](#technologies)
     * [Languages and Frameworks](#landf)
@@ -148,7 +148,7 @@ Here is my palette :
 
 * Following requirements, I created my database structure within the Django Framework. For this I followed the **Boutique Ado** CodeInstitute  mini-project.
 
-Please click here to see my database scheme made with [**QuickDBD**](https://www.quickdatabasediagrams.com/) or check the image below:
+I made the following schema with [**QuickDBD**](https://www.quickdatabasediagrams.com/):
 
 <a name="defensivedesign"></a>
 
@@ -207,7 +207,7 @@ Please click here to see my database scheme made with [**QuickDBD**](https://www
 
 <a name="existing"></a>
 
-### Existiting Features ###
+### Existiting Features per Apps ###
 
 **Responsiveness**
 
@@ -264,11 +264,15 @@ Please click here to see my database scheme made with [**QuickDBD**](https://www
 2. Product detail page:
 * This page displays all the product details (name, category, image, description, price, sizes if any) as well as the review section. All users can visit the product details and read the reviews but need the be registered and logged in to leave a review and a rating.
 
-3. Review/rating section
+3. Review/rating section:
 * When logged in the user can edit and delete their review and rating directly from the review section. The edit link  redirects to an edit form while the delete link triggers a confirmation modal and deletes the review forever if "Delete" is clicked in the modal.
 * To add a review and a rating, the user can click on the "Leave a review" button and will be redirected to the add review page and fill a simple form. Once the form is filled and the user clicked the "Submit" button, they will be redirected to the product page.
 
-4. Product management:
+4. Suggested Product:
+* This feature is located at the bottom of the product details page and is implemented to encourage the customer to look into more store products.
+* It generates maximum 4 product cards of the same product category than the product details viewed by the user.
+
+5. Product management:
 * If the user is logged in as an admin, they will have the possibility to navigate to the Product management page (through the profile dropdown menu in the main navigation bar) and have the possibility to add a product to the database by filling the add product form. Images can be selected directly from the user's computer and not only as url linked images.
 * The admin only can edit and/or delete any product by navigating on a product detail page and click on the edit/delete links.The edit link redirects to a edit form while the delete link triggers a confirmation modal and permanently deletes the product from the database if "Delete" is clicked in the modal.
 

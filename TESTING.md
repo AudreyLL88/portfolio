@@ -14,9 +14,6 @@
         * [Purchase and Checkout](#purchase)
         * [Admin and Store Management](#admin)
         * [Stripe](#stripe)
-        *
-
-* 4.[Back End Admin](#backend)
 * 5.[Issues](#issues)
 
 
@@ -54,7 +51,6 @@ I struggled a fair bit to find the right color scheme as I've tend to choose col
 <a name="manual"></a>
 ## Manual Testing ## 
 ---
-
 
 **1. Viewing and Navigation**
 
@@ -280,9 +276,14 @@ j. As an admin I want to be able to be notified when a customer send a query thr
 * Testing: When testing locally: Navigated to the contact page, filled the contact form and clicked send then I looked into the Gitpod terminal to check if the contact form informations were sent to the admin email and correctly displayed.
 * Result: Site acted as expected and displayed the email with all the contact form information in the Gitpod terminal. 
 
-<a name="admin"></a>
-## Back end Admin ## 
----
+**6. Stripe**
+
+To test the webhooks as well as the payment process, I used the Stripe testing card numbers:
+
+* No authentication (default U.S. card): 4242 4242 4242 4242.
+* Authentication required: 4000 0027 6000 3184.
+
+The payment method and webhook behaved as expected and were both successful.
 
 <a name="issues"></a>
 ## Issues ## 
