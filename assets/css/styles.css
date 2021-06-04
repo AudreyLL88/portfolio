@@ -204,6 +204,8 @@ img{
     color: var(--white-color);
     padding-top: 1rem;
 }
+
+
 .home__img{
     position: absolute;
     right: 0;
@@ -245,6 +247,25 @@ img{
     display: block;
     margin-bottom: var(--mb-4);
 }
+
+.about__social{
+    padding-top: 30px;
+}
+
+.button__cv {
+    align-self: flex-end;
+    background-color: var(--dark-color);
+    color: var(--first-color);
+    padding: .75rem 1rem;
+    border-radius: .25rem;
+    transition: .3;
+    top: .25rem;
+}
+
+.button__cv:hover {
+    background-color: var(--white-color);
+}
+
 .about__social-icon{
     font-size: 2rem;
     margin: 0 var(--mb-1);
