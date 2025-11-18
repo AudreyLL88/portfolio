@@ -20,7 +20,7 @@ n/* ==== GOOGLE FONTS ====*/
     --body-font: 'Montserrat', sans-serif;
     --big-font-size: 6.25rem;
     --h2-font-size: 1.25rem;
-    --contact-font-size: 1rem;
+    --contact-font-size: 1.3rem;
     --normal-font-size: .938rem;
     --small-font-size: .813rem;
 }
@@ -203,7 +203,7 @@ img{
     writing-mode: vertical-lr;
     transform: rotate(-180deg);
     color: var(--white-color);
-    padding-top: 1rem;
+    padding-top: 2rem;
 }
 
 
@@ -460,7 +460,7 @@ img{
     .button__contact {
     align-self: center;
     background-color: var(--dark-color);
-    color: var(--first-color);
+    color: var(--white-color);
     padding: .75rem 1rem;
     border-radius: .25rem;
     transition: .3;
@@ -468,7 +468,7 @@ img{
 }
 
     .button__contact:hover {
-    background-color: var(--white-color);
+    background-color: var(--first-color);
 }
 
     .footer__container{
