@@ -197,13 +197,13 @@ img{
 }
 .home__scroll{
     align-self: flex-end;
-    padding-bottom: var(--mb-4);
+    padding-bottom: var(--mb-5);
 }
 .home__scroll-link{
     writing-mode: vertical-lr;
     transform: rotate(-180deg);
     color: var(--white-color);
-    padding-top: 2rem;
+    padding-top: 1rem;
 }
 
 
@@ -337,12 +337,10 @@ img{
 }
 
 /* ===== CONTACT =====*/
-.contact__container{   
-}
 
 .contact__text{
     display: inline-block;
-    margin-bottom: var(--mb-2);
+    margin-bottom: var(--mb-4);
 }
 .button__contact {
     align-self: center;
@@ -354,7 +352,7 @@ img{
     top: .25rem;
 }
 
-    .button__contact:hover {
+.button__contact:hover {
     background-color: var(--first-color);
 }
 
