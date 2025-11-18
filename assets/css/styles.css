@@ -338,7 +338,6 @@ img{
 
 /* ===== CONTACT =====*/
 .contact__container{
-    .contact__container {
     align-items: center;     
     row-gap: 2rem;           
     text-align: center;     
