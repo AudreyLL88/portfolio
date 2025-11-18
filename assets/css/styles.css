@@ -337,7 +337,10 @@ img{
 }
 
 /* ===== CONTACT =====*/
-.contact__container{   
+.contact__container{ 
+    align-items: center;     /* Center horizontally */
+    row-gap: 2rem;           /* Keep spacing between items */
+    text-align: center; 
 }
 .contact__text{
     display: inline-block;
