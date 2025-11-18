@@ -337,7 +337,8 @@ img{
 }
 
 /* ===== CONTACT =====*/
-
+.contact__container{   
+}
 .contact__text{
     display: inline-block;
     margin-bottom: var(--mb-4);
