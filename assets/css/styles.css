@@ -481,11 +481,21 @@ img{
 
     .contact__container{
         grid-template-columns: repeat(2, 1fr);
-        justify-items: center;
+        align-items: center;
     }
-    .contact__form{
-        width: 380px;
-    }
+    .button__contact {
+    align-items: center;
+    background-color: var(--dark-color);
+    color: var(--white-color);
+    padding: .75rem 1rem;
+    border-radius: .25rem;
+    transition: .3;
+    top: .25rem;
+}
+
+.button__contact:hover {
+    background-color: var(--first-color);
+}
 
     .footer__container{
         grid-template-columns: repeat(3, 1fr);
