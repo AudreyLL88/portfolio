@@ -344,6 +344,7 @@ img{
 }
 .contact__text{
     display: inline-block;
+    font-size: var(--contact-font-size);
     margin-bottom: var(--mb-4);
 }
 .button__contact {
