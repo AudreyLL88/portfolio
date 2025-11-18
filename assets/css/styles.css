@@ -203,7 +203,7 @@ img{
     writing-mode: vertical-lr;
     transform: rotate(-180deg);
     color: var(--white-color);
-    padding-top: 1rem;
+    padding-top: 3rem;
 }
 
 
