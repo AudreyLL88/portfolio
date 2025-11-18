@@ -322,7 +322,7 @@ img{
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: rgba(0,0,0,0,.3);
+    background-color: rgba(0,0,0);
     border-radius: .5rem;
     cursor: pointer;
     backdrop-filter: blur(10px);
